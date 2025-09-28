@@ -5,6 +5,7 @@ import 'package:meditate/responsive.dart';
 
 import 'BottomStyle.dart';
 import 'FontStyle.dart';
+import 'Welcome.dart';
 
 class Signup extends StatefulWidget {
 
@@ -31,7 +32,7 @@ class _SignupState extends State<Signup> {
 
       resizeToAvoidBottomInset: false,
       body: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(20),
         child: Column(
           children: [
             SizedBox(height: responsive.percentHight(50)),
@@ -147,7 +148,8 @@ class _SignupState extends State<Signup> {
             ),
 
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Expanded(flex: 3,
                   child: RichText(
@@ -176,6 +178,7 @@ class _SignupState extends State<Signup> {
                 ),
                 SizedBox(width: responsive.percentWidth(30),),
                 Expanded(flex: 1,
+
                   child: Checkbox(value: cackboxbalu, onChanged: (bool? newvalue){setState(() {
                     cackboxbalu =newvalue ??false;
                   });}),
@@ -187,7 +190,9 @@ class _SignupState extends State<Signup> {
               children: [
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Welcome()));
+                    },
                     child: Text(
                       "GET STARTED",
                       style: textStyle(14, FontWeight.w400, Colors.white),

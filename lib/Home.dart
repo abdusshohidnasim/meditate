@@ -5,6 +5,7 @@ import 'package:meditate/FontStyle.dart';
 import 'package:meditate/responsive.dart';
 
 import 'Login.dart';
+import 'Signup.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -76,7 +77,9 @@ class _HomeState extends State<Home> {
               children: [
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Signup()));
+                    },
                     child: Text("SIGN UP",style: textStyle(14, FontWeight.w400, Colors.white),),
                     style: buttonStyle(
                       Size(0, responsive.percentHight(63)),
