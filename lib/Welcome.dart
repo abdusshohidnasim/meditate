@@ -20,6 +20,7 @@ class _WelcomeState extends State<Welcome> {
     Responsive responsive = Responsive(h, w);
     return Scaffold(
       backgroundColor: Color(0xFF9AA2FD),
+
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
