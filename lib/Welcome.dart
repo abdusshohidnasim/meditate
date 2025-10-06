@@ -41,6 +41,7 @@ class _WelcomeState extends State<Welcome> {
               ],
             ),
             Row(
+
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
